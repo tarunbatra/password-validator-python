@@ -73,9 +73,3 @@ class PasswordValidator:
     def symbols(self):
         self.__registerProperty(lib.symbols)
         return self
-
-
-schema = PasswordValidator()
-schema.has().letters()
-schema.validate('DDD4$')
-schema.validate('4$')
