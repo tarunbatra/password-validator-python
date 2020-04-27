@@ -1,6 +1,11 @@
+[![pypi version][pypi-image]][pypi-url]
+![python version][python-image]
+![format][format-image]
+![status][status-image]
+
 # password-validator
 
-This is a python port of `npm` package [password-validator](https://github.com/tarunbatra/password-validator)
+This is a python port of `npm` package [password-validator](https://github.com/tarunbatra/password-validator).
 
 ## Install
 `pip install password-validator`
@@ -46,3 +51,9 @@ Rules supported as of now are:
 
 ## License
 [MIT License](https://choosealicense.com/licenses/mit/)
+
+[pypi-image]: https://img.shields.io/pypi/v/password-validator?color=blue&logo=password_validator&style=flat-square
+[pypi-url]: https://pypi.org/project/password-validator
+[python-image]: https://img.shields.io/pypi/pyversions/password-validator?color=red&logo=version&style=flat-square
+[format-image]: https://img.shields.io/pypi/format/password-validator?color=orange&style=flat-square
+[status-image]: https://img.shields.io/pypi/status/password-validator?logo=status&style=flat-square
