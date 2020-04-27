@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(name="password_validator",
-      version="0.17",
+      version="0.1",
       description="Validates password according to flexible and intuitive specifications",
       long_description=long_description,
       long_description_content_type='text/markdown',
@@ -14,7 +14,8 @@ setup(name="password_validator",
       author="Tarun Batra",
       author_email="tarun.batra00@gmail.com",
       url="https://github.com/tarunbatra/password-validator-python",
-      packages=find_packages(),
+      packages=find_packages("src"),
+      package_dir={"": "src"},
       classifiers=[
           "Development Status :: 1 - Planning",
           "Intended Audience :: Developers",
