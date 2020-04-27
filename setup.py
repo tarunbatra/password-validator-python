@@ -5,8 +5,8 @@ from setuptools import setup, find_packages
 with open("README.md", "r") as f:
     long_description = f.read()
 
-setup(name="p_v",
-      version="0.5",
+setup(name="password_validator",
+      version="0.17",
       description="Validates password according to flexible and intuitive specifications",
       long_description=long_description,
       long_description_content_type='text/markdown',
@@ -14,8 +14,7 @@ setup(name="p_v",
       author="Tarun Batra",
       author_email="tarun.batra00@gmail.com",
       url="https://github.com/tarunbatra/password-validator-python",
-      packages=find_packages("src"),
-      package_dir={"": "src"},
+      packages=find_packages(),
       classifiers=[
           "Development Status :: 1 - Planning",
           "Intended Audience :: Developers",

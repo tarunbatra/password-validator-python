@@ -1,6 +1,7 @@
 
 import re
-import lib
+
+from . import lib
 from .constants import error
 
 
@@ -11,8 +12,8 @@ class PasswordValidator:
         self.positive = True
 
     def validate(self, pwd):
-        self.password = str(pwd)
-        return all(self.__isPasswordValidFor(prop) for prop in self.properties)
+        password = str(pwd)
+        return all(self.__isPasswordValidFor(prop, password) for prop in self.properties)
 
     def __registerProperty(self, func, args=[]):
         self.properties.append({
@@ -21,8 +22,8 @@ class PasswordValidator:
             'arguments': args
         })
 
-    def __isPasswordValidFor(self, prop):
-        return prop['method'](self.password, prop['positive'], *prop['arguments'])
+    def __isPasswordValidFor(self, prop, password):
+        return prop['method'](password, prop['positive'], *prop['arguments'])
 
     def __validateNum(self, num):
         assert (type(num) == 'int' or num > 0), error['length']
@@ -30,13 +31,13 @@ class PasswordValidator:
     def has(self, regexp=None):
         self.positive = True
         if (regexp):
-            self.__registerProperty( as lib.has, [re.compile(regexp)])
+            self.__registerProperty(lib.has, [re.compile(regexp)])
         return self
 
     def no(self, regexp=None):
         self.positive = not self.positive
         if (regexp):
-            self.__registerProperty( as lib.no, [re.compile(regexp)])
+            self.__registerProperty(lib.no, [re.compile(regexp)])
         return self
 
     def uppercase(self):
