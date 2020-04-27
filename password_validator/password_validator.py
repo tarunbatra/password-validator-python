@@ -30,14 +30,14 @@ class PasswordValidator:
 
     def has(self, regexp=None):
         self.positive = True
-        if (regexp):
-            self.__registerProperty(lib.has, [re.compile(regexp)])
+        if regexp:
+            self.__registerProperty(lib.applyRegexp, [re.compile(regexp)])
         return self
 
     def no(self, regexp=None):
         self.positive = not self.positive
-        if (regexp):
-            self.__registerProperty(lib.no, [re.compile(regexp)])
+        if regexp:
+            self.__registerProperty(lib.applyRegexp, [re.compile(regexp)])
         return self
 
     def uppercase(self):

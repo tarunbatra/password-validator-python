@@ -6,11 +6,7 @@ def _process(password, positive, regexp):
     return bool(re.search(regexp, password)) == bool(positive)
 
 
-def has(password, positive, symbol):
-    return _process(password, positive, re.compile(symbol))
-
-
-def no(password, positive, symbol):
+def applyRegexp(password, positive, symbol):
     return _process(password, positive, re.compile(symbol))
 
 
