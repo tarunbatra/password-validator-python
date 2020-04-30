@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(name="password_validator",
-      version="0.1",
+      version="0.2",
       description="Validates password according to flexible and intuitive specifications",
       long_description=long_description,
       long_description_content_type='text/markdown',
