@@ -36,5 +36,5 @@ setup(name=name,
             'project': ('setup.py', name),
             'version': ('setup.py', version),
             'source_dir': ('setup.py', 'docs/source'),
-            'build_dir': ('setup.py', 'docs/_build')}},
+            'build_dir': ('setup.py', 'docs/build')}},
       )
