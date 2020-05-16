@@ -15,7 +15,7 @@ class PasswordValidator:
         password = str(pwd)
         return all(self.__isPasswordValidFor(prop, password) for prop in self.properties)
 
-    def __registerProperty(self, func, args=[]):
+    def __registerProperty(self, func, args=[]): # pylint: disable=dangerous-default-value
         self.properties.append({
             'method': func,
             'positive': self.positive,
@@ -26,7 +26,7 @@ class PasswordValidator:
         return prop['method'](password, prop['positive'], *prop['arguments'])
 
     def __validateNum(self, num):
-        assert (type(num) == 'int' or num > 0), error['length']
+        assert (type(num) == 'int' or num > 0), error['length'] # pylint: disable=unidiomatic-typecheck
 
     def has(self, regexp=None):
         self.positive = True

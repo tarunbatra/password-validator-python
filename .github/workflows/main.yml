@@ -39,6 +39,9 @@ jobs:
       - name: Install password_validator
         run: pip install .
 
+      - name: Run lint
+        run: pylint src
+
       - name: Run tests
         run: coverage run -m unittest discover -s tests -v
 
