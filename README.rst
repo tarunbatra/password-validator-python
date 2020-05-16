@@ -1,6 +1,6 @@
 | |logo|
 
-| |pypi version| |build| |format| |status| |python version|
+| |pypi version| |build| |coverage| |format| |status| |python version|
 
 password_validator
 ==================
@@ -80,3 +80,5 @@ License
 .. |logo| image:: https://res.cloudinary.com/tbking/image/upload/v1490803400/password-validator/logo.png
 .. |build| image:: https://img.shields.io/github/workflow/status/tarunbatra/password-validator-python/CI?logo=github&style=flat-square
     :target: https://github.com/tarunbatra/password-validator-python/actions?query=workflow%3ACI
+.. |coverage| image:: https://img.shields.io/codecov/c/gh/tarunbatra/password-validator-python?logo=codecov&style=flat-square
+    :target: https://codecov.io/gh/tarunbatra/password-validator-python
