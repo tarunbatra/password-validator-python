@@ -1,4 +1,3 @@
-
 import re
 
 from . import lib
@@ -11,8 +10,10 @@ class PasswordValidator:
     Example:
         >>> schema = PasswordValidator()
         >>> schema.has().letters().has().digits().no().spaces()
+        <src.password_validator.password_validator.PasswordValidator object at ...>
         >>> schema.validate('testPassword123')
         True
+
     Returns:
         PasswordValidator: Schema object
     '''
@@ -30,6 +31,7 @@ class PasswordValidator:
             False
             >>> PasswordValidator().letters().validate('abc')
             True
+
         Args:
             pwd (str): Password to validate against the schema
         Returns:
@@ -63,6 +65,7 @@ class PasswordValidator:
             True
             >>> PasswordValidator().has(r'[a-z]+').validate('test')
             True
+
         Args:
             regexp (str, optional): The regular expression or string to mandate on the password
         Returns:
@@ -107,6 +110,7 @@ class PasswordValidator:
             True
             >>> PasswordValidator().uppercase().validate('test')
             False
+
         Returns:
             PasswordValidator: Updated schema object
         '''
@@ -121,6 +125,7 @@ class PasswordValidator:
             True
             >>> PasswordValidator().lowercase().validate('TEST')
             False
+
         Returns:
             PasswordValidator: Updated schema object
         '''
@@ -136,6 +141,7 @@ class PasswordValidator:
             True
             >>> PasswordValidator().no().letters().validate('test')
             False
+
         Returns:
             PasswordValidator: Updated schema object
         '''
@@ -151,6 +157,7 @@ class PasswordValidator:
             False
             >>> PasswordValidator().no().digits().validate('test123')
             False
+
         Returns:
             PasswordValidator: Updated schema object
         '''
@@ -166,6 +173,7 @@ class PasswordValidator:
             True
             >>> PasswordValidator().min(8).validate('test')
             False
+
         Args:
             length (int): Minimum length allowed
         Returns:
@@ -184,6 +192,7 @@ class PasswordValidator:
             False
             >>> PasswordValidator().max(8).validate('test')
             True
+
         Args:
             length (int): Maximum length allowed
         Returns:
@@ -201,6 +210,7 @@ class PasswordValidator:
             True
             >>> PasswordValidator().no().spaces().validate('a  bc')
             False
+
         Returns:
             PasswordValidator: Updated schema object
         '''
