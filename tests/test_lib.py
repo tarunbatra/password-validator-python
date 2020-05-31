@@ -1,5 +1,5 @@
 import unittest
-from password_validator import lib
+from src.password_validator import lib
 
 
 class TestLib(unittest.TestCase):
