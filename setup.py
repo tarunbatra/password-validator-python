@@ -6,7 +6,7 @@ with open("README.rst", "r") as f:
     long_description = f.read()
 
 name = "password_validator"
-version = "0.2"
+version = "1.0"
 
 setup(name=name,
     version=version,
@@ -20,7 +20,7 @@ setup(name=name,
     packages=find_packages("src"),
     package_dir={"": "src"},
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Natural Language :: English",
