@@ -19,6 +19,7 @@ setup(name=name,
     url="https://github.com/tarunbatra/password-validator-python",
     packages=find_packages("src"),
     package_dir={"": "src"},
+    keywords: "password, validation, schema",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
