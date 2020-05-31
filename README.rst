@@ -1,6 +1,6 @@
 | |logo|
 
-| |pypi version| |build| |coverage| |format| |status| |python version| |github release|
+| |pypi version| |build| |coverage| |python version| |github release|
 
 password_validator
 ==================
@@ -79,10 +79,6 @@ License
    :target: https://pypi.org/project/password-validator
 .. |python version| image:: https://img.shields.io/pypi/pyversions/password-validator?color=red&logo=version&style=flat-square
     :alt: Python version
-.. |format| image:: https://img.shields.io/pypi/format/password-validator?color=orange&style=flat-square
-    :alt: Dist format
-.. |status| image:: https://img.shields.io/pypi/status/password-validator?logo=status&style=flat-square
-    :alt: Status
 .. |logo| image:: https://res.cloudinary.com/tbking/image/upload/v1490803400/password-validator/logo.png
     :alt: Password Validator
     :target: https://tarunbatra.com/password-validator-python
