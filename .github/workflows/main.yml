@@ -36,9 +36,6 @@ jobs:
       - name: Install dev deps
         run: pip install -r requirements-dev.txt
 
-      - name: Install password_validator
-        run: pip install .
-
       - name: Run lint
         run: pylint src
 
